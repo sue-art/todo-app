@@ -9,17 +9,12 @@ import Routes from "./routes/";
 import { appTheme } from "./themes/theme";
 import "./App.css";
 
-// project imports
-import NavigationScroll from "./pages/NavigationScroll";
-
 function App() {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={appTheme}>
         <CssBaseline />
-        <NavigationScroll>
-          <Routes />
-        </NavigationScroll>
+        <Routes />
       </ThemeProvider>
     </StyledEngineProvider>
   );

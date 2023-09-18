@@ -7,10 +7,9 @@ import { AppBar, Box } from "@mui/material";
 
 // project imports
 import { app } from "../config/firebase";
-
 import Nav from "./Nav";
-
 import { userContext } from "./userContext";
+import NavigationScroll from "./NavigationScroll";
 
 // styles
 const Main = styled("div")(({ theme, open }) => ({
@@ -41,36 +40,38 @@ const MainLayout = () => {
   return (
     <div>
       <userContext.Provider value={[userName, setUserName]}>
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          minHeight="100vh"
-          sx={{}}
-        >
-          {/* header */}
-          <AppBar
-            enableColorOnDark
-            position="fixed"
-            color="inherit"
-            elevation={0}
-            sx={{
-              bgcolor: theme.palette.background.default,
-            }}
+        <NavigationScroll>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            minHeight="100vh"
+            sx={{}}
           >
-            <Nav />
-          </AppBar>
-          {/* main content */}
-          <Main
-            theme={theme}
-            sx={{
-              pt: 10,
-              bgcolor: theme.palette.white,
-            }}
-          >
-            <Outlet />
-          </Main>
-        </Box>
+            {/* header */}
+            <AppBar
+              enableColorOnDark
+              position="fixed"
+              color="inherit"
+              elevation={0}
+              sx={{
+                bgcolor: theme.palette.background.default,
+              }}
+            >
+              <Nav />
+            </AppBar>
+            {/* main content */}
+            <Main
+              theme={theme}
+              sx={{
+                pt: 10,
+                bgcolor: theme.palette.white,
+              }}
+            >
+              <Outlet />
+            </Main>
+          </Box>
+        </NavigationScroll>
       </userContext.Provider>
     </div>
   );
