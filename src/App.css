@@ -1,4 +1,5 @@
 .App {
+  color: white;
   text-align: center;
 }
 
@@ -16,17 +17,85 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 100px 50px;
+}
+h1{
+  margin-top: 50px;
+}
+p{
+  color: #282c34;
 }
 
 .App-link {
   color: #61dafb;
 }
+
+.todo-list {
+  margin: 10px 0;
+  color: #282c34;
+  text-align: left;
+}
+
+.todo-list .todo-item {
+ padding: 15px;
+ margin: 5px 0;
+ border-radius: 0;
+}
+
+.checked{
+  color: gray;
+}
+
+div.checker input{
+ width: 18px;
+ height: 18px
+}
+
+div.checker p{
+ display: inline-block;
+}
+
+
+div.checker i {
+     font-size: 12px;
+ }
+
+.done p{
+ text-decoration: line-through;
+}
+
+
+.Navbar {
+  background-color: lightsteelblue;
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Roboto;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 0px 5px silver;
+}
+
+.Toolbar {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.Logo {
+  margin-right: 10px;
+}
+
+.Title {
+  flex-grow: 1;
+}
+
 
 @keyframes App-logo-spin {
   from {
