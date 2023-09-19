@@ -19,11 +19,10 @@ const Dashboard = () => {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12}></Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <ProfileSection />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <Todo />
       </Grid>
     </Grid>
