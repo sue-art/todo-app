@@ -1,6 +1,5 @@
 import React, { useState, useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 // firebase imports
 import { getAuth } from "firebase/auth";

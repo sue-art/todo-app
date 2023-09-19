@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import dayjs from "dayjs";
 import Moment from "react-moment";
-import "moment-timezone";
 import moment from "moment";
 
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
